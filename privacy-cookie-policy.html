@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Cookie Policy | OliMezz Web Agency</title>
+    <meta name="description" content="Informativa sulla Privacy e Cookie Policy di OliMezz Web Agency.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B192C',
+                            light: '#1E2F4D',
+                            accent: '#4A90E2',
+                            gray: '#8B9BB4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+                        'glow': '0 0 20px rgba(74, 144, 226, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+    <!-- Header -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/70 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-12 w-auto object-contain rounded-md group-hover:shadow-glow transition-shadow">
+            </a>
+
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Chi Siamo</a>
+                <a href="contact.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Contatti</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="services.html" class="px-5 py-2.5 bg-white text-brand-dark font-semibold text-sm rounded-full hover:bg-brand-accent hover:text-white transition-all duration-300 shadow-soft">
+                    Inizia ora
+                </a>
+            </div>
+
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 absolute w-full">
+            <div class="flex flex-col px-6 py-4 gap-4">
+                <a href="index.html" class="text-base font-medium">Home</a>
+                <a href="about.html" class="text-base font-medium">Chi Siamo</a>
+                <a href="contact.html" class="text-base font-medium">Contatti</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="pt-32 pb-24 min-h-screen relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-brand-light/20 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-14 border border-white/5 relative overflow-hidden" data-aos="fade-up">
+                
+                <!-- Abstract Background Shapes -->
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8">Privacy & <span class="text-brand-accent">Cookie Policy</span></h1>
+                    
+                    <div class="space-y-8 text-brand-gray leading-relaxed">
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-3">1. Titolare del Trattamento</h2>
+                            <p>Il titolare del trattamento dei dati è <strong>OliMezz Web Agency</strong>, con sede a Pescara, Italia. Email di contatto: <a href="mailto:olimezz@icloud.com" class="text-brand-accent hover:underline">olimezz@icloud.com</a>.</p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-3">2. Tipologia di Dati Raccolti</h2>
+                            <p>I dati personali raccolti attraverso questo sito web includono:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>Dati di navigazione:</strong> Indirizzi IP, log di sistema, e altri dati tecnici per garantire il corretto funzionamento del sito.</li>
+                                <li><strong>Dati forniti volontariamente:</strong> Informazioni di contatto condivise dagli utenti quando ci contattano tramite WhatsApp, Email o i moduli presenti sul sito.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-3">3. Finalità del Trattamento</h2>
+                            <p>I dati raccolti vengono utilizzati per le seguenti finalità:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>Risposta alle richieste:</strong> Per rispondere alle richieste di preventivo, informazioni o supporto ricevute dagli utenti.</li>
+                                <li><strong>Analisi del traffico:</strong> Per analizzare, in modo anonimo e aggregato, il traffico sul sito web al fine di migliorare i nostri servizi e la User Experience (UX).</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-3">4. Cookie</h2>
+                            <p>Il nostro sito utilizza cookie per offrirti un'esperienza migliore. Utilizziamo:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>Cookie Tecnici:</strong> Strettamente necessari per il funzionamento del sito.</li>
+                                <li><strong>Cookie di Profilazione/Analitici:</strong> Utilizzati per tracciare il comportamento degli utenti e personalizzare l'esperienza, conformemente al GDPR. Puoi scegliere se accettare o rifiutare questi cookie tramite il banner presente sul sito. Le tue preferenze verranno salvate per le sessioni successive.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-3">5. Diritti dell'Utente</h2>
+                            <p>Ai sensi del GDPR, gli utenti hanno il diritto di accedere, rettificare, cancellare o limitare il trattamento dei propri dati personali. Per esercitare questi diritti, vi invitiamo a contattarci all'indirizzo email di riferimento.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 pt-16 pb-8 text-center bg-brand-dark relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center justify-center mb-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-12 w-auto object-contain rounded-md">
+                </div>
+                <p class="text-brand-gray max-w-sm">Eleviamo il tuo brand attraverso esperienze digitali straordinarie e performanti.</p>
+            </div>
+            <div class="text-brand-gray/60 text-sm flex flex-col items-center gap-2">
+                <p>Progettato con cura tra il mare e le montagne d'Abruzzo. 🌊🏔️</p>
+                <p>&copy; 2026 OliMezz Web Agency. Tutti i diritti riservati. | <a href="privacy-cookie-policy.html" class="hover:text-brand-accent transition-colors">Privacy & Cookie Policy</a> | <a href="#" id="revoke-cookie-consent" class="hover:text-brand-accent transition-colors">Rivedi consensi cookie</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

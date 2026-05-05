@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management | OliMezz Web Agency</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B192C',
+                            light: '#1E2F4D',
+                            accent: '#4A90E2',
+                            gray: '#8B9BB4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+                        'glow': '0 0 20px rgba(74, 144, 226, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/70 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-10 w-auto object-contain rounded-md group-hover:shadow-glow transition-shadow">
+            </a>
+            <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Torna alla Home
+            </a>
+        </div>
+    </header>
+
+    <!-- SMM Pricing Section -->
+    <section id="smm-pricing" class="py-32 relative min-h-screen flex flex-col justify-center" style="background-color: #0b1120;">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">La tua Voce sui <span class="text-brand-accent">Social</span></h2>
+                <p class="text-brand-gray max-w-2xl mx-auto text-lg">Gestiamo la tua immagine su Meta e TikTok con strategie locali per il mercato abruzzese.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                
+                <!-- Card 1: Lite Social -->
+                <div class="bg-brand-light/20 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                        <!-- Icon: Document/Basic -->
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-brand-gray mb-2">Lite Social</h3>
+                    <div class="text-4xl font-bold text-white mb-8">150€<span class="text-lg font-normal text-brand-gray">/mese</span></div>
+                    <ul class="space-y-4 mb-8 text-brand-gray">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 1 Piattaforma</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 2 Post/settimana</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Grafiche base</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-3 px-6 text-center rounded-full bg-brand-light/40 hover:bg-brand-accent text-white font-semibold transition-colors duration-300">Richiedi Lite</a>
+                </div>
+
+                <!-- Card 2: Pro Social -->
+                <div class="bg-gradient-to-b from-brand-accent/20 to-brand-light/30 backdrop-blur-xl rounded-3xl p-8 border border-brand-accent/50 hover:shadow-glow hover:-translate-y-2 transition-all duration-300 relative transform md:scale-105 z-10" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide shadow-lg">Più Scelto</div>
+                    <div class="w-14 h-14 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6 text-pink-400 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
+                        <!-- Icon: Growth/Engagement -->
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-brand-gray mb-2">Pro Social</h3>
+                    <div class="text-4xl font-bold text-white mb-8">300€<span class="text-lg font-normal text-gray-300">/mese</span></div>
+                    <ul class="space-y-4 mb-8 text-gray-200">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 2 Piattaforme</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 4 Post/settimana + Stories</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Report mensile</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-4 px-6 text-center rounded-full bg-brand-accent hover:bg-blue-500 text-white font-bold transition-colors duration-300 shadow-lg">Richiedi Pro</a>
+                </div>
+
+                <!-- Card 3: Elite Social -->
+                <div class="bg-brand-light/20 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                        <!-- Icon: Video/Professional -->
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-brand-gray mb-2">Elite Social</h3>
+                    <div class="text-4xl font-bold text-white mb-8">500€<span class="text-lg font-normal text-brand-gray">/mese</span></div>
+                    <ul class="space-y-4 mb-8 text-brand-gray">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gestione totale</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Video/Reels professionali</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Advertising base</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Supporto prioritario</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-3 px-6 text-center rounded-full bg-brand-light/40 hover:bg-brand-accent text-white font-semibold transition-colors duration-300">Richiedi Elite</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 pt-16 pb-8 text-center bg-brand-dark relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center justify-center mb-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-12 w-auto object-contain rounded-md">
+                </div>
+                <p class="text-brand-gray max-w-sm">Eleviamo il tuo brand attraverso esperienze digitali straordinarie e performanti.</p>
+            </div>
+            <div class="text-brand-gray/60 text-sm flex flex-col items-center gap-2">
+                <p>Progettato con cura tra il mare e le montagne d'Abruzzo. 🌊🏔️</p>
+                <p>&copy; 2026 OliMezz Web Agency. Tutti i diritti riservati. | <a href="privacy-cookie-policy.html" class="hover:text-brand-accent transition-colors">Privacy & Cookie Policy</a> | <a href="#" id="revoke-cookie-consent" class="hover:text-brand-accent transition-colors">Rivedi consensi cookie</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 100, duration: 800, easing: 'ease-out-cubic' });
+    </script>
+</body>
+</html>

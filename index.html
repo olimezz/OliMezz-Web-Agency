@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OliMezz Web Agency | Trasformiamo Visioni in Realtà Digitale</title>
+    <meta name="description" content="OliMezz Web Agency: Innovazione, Design e Performance per la tua presenza digitale.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS (Play CDN for standalone usage without node) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B192C',
+                            light: '#1E2F4D',
+                            accent: '#4A90E2',
+                            gray: '#8B9BB4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+                        'glow': '0 0 20px rgba(74, 144, 226, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+    <!-- Header (Sticky & Glassmorphism) -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/70 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-12 w-auto object-contain rounded-md group-hover:shadow-glow transition-shadow">
+            </a>
+
+            <!-- Navigation Desktop -->
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Chi Siamo</a>
+                <a href="contact.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Contatti</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="hidden md:block">
+                <a href="services.html" class="px-5 py-2.5 bg-white text-brand-dark font-semibold text-sm rounded-full hover:bg-brand-accent hover:text-white transition-all duration-300 shadow-soft">
+                    Inizia ora
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 absolute w-full">
+            <div class="flex flex-col px-6 py-4 gap-4">
+                <a href="index.html" class="text-base font-medium">Home</a>
+                <a href="about.html" class="text-base font-medium">Chi Siamo</a>
+                <a href="contact.html" class="text-base font-medium">Contatti</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/20 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Copy -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-block px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6">
+                    <span class="text-xs font-semibold tracking-wider text-brand-gray uppercase">Web Agency di Nuova Generazione</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Trasformiamo Visioni in <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-accent to-blue-400">Realtà Digitale.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-brand-gray mb-10 max-w-lg leading-relaxed">
+                    Creiamo esperienze web ad alto impatto visivo. Design dinamico, prestazioni estreme e interfacce all'avanguardia per il tuo business.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="services.html" class="px-8 py-4 bg-white text-brand-dark font-bold rounded-full hover:shadow-glow hover:scale-105 transition-all duration-300">
+                        Inizia il Progetto
+                    </a>
+                    <a href="about.html" class="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300">
+                        Scopri di più
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <!-- Floting element container with CSS animation -->
+                <div class="floating-laptop-container relative w-full aspect-square flex justify-center items-center">
+                    <!-- The generated high-end laptop with anti-gravity splashing -->
+                    <img src="assets/hero-laptop.png" alt="High-end laptop floating with digital splashes" class="w-full max-w-lg object-contain relative z-20 drop-shadow-2xl hero-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creazione Sito Preview -->
+    <section class="py-24 relative bg-brand-dark" id="creazione-sito">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-brand-light/20 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-14 border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden" data-aos="fade-up">
+                    
+                    <!-- Abstract Background Shapes -->
+                    <div class="absolute top-0 left-0 -ml-20 -mt-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 right-0 -mr-20 -mb-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10 flex flex-col md:flex-row-reverse items-center justify-between gap-10">
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Creazione <span class="text-brand-accent">Sito</span></h2>
+                            <p class="text-brand-gray text-lg mb-8 leading-relaxed max-w-xl">
+                                Non solo un sito, ma uno strumento di vendita. Realizziamo piattaforme veloci, sicure e ottimizzate per ogni dispositivo.
+                            </p>
+                            <a href="pricing.html" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-glow hover:-translate-y-1">
+                                Scopri i Piani <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Floating Icons / Visual -->
+                        <div class="flex-shrink-0 relative w-64 h-64 flex items-center justify-center">
+                            <!-- Code/Dev Abstract Icon -->
+                            <div class="w-20 h-20 bg-blue-500/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center text-blue-400 absolute top-4 right-4 animate-[bounce_4s_infinite] shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <!-- Speed/Performance Abstract Icon -->
+                            <div class="w-24 h-24 bg-green-500/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center text-green-400 absolute bottom-4 left-4 animate-[bounce_5s_infinite_1s] shadow-[0_0_20px_rgba(34,197,94,0.3)] z-10">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <!-- Center Glass Circle -->
+                            <div class="w-16 h-16 bg-brand-light/40 backdrop-blur-md rounded-full border border-white/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Management Preview -->
+    <section class="py-24 relative bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-brand-light/20 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-14 border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden" data-aos="fade-up">
+                    
+                    <!-- Abstract Background Shapes -->
+                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Social Media <span class="text-brand-accent">Management</span></h2>
+                            <p class="text-brand-gray text-lg mb-8 leading-relaxed max-w-xl">
+                                Non solo siti web. Portiamo il tuo brand su Meta e TikTok con strategie mirate per il mercato locale. Grafiche accattivanti, Reels virali e campagne pubblicitarie per farti trovare da nuovi clienti.
+                            </p>
+                            <a href="smm.html" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-glow hover:-translate-y-1">
+                                Scopri i Piani <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Floating Icons / Visual -->
+                        <div class="flex-shrink-0 relative w-64 h-64 flex items-center justify-center">
+                            <!-- Instagram/Meta Abstract Icon -->
+                            <div class="w-20 h-20 bg-pink-500/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center text-pink-400 absolute top-4 left-4 animate-[bounce_4s_infinite] shadow-[0_0_20px_rgba(236,72,153,0.3)]">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </div>
+                            <!-- Facebook/General Abstract Icon -->
+                            <div class="w-24 h-24 bg-blue-500/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center text-blue-400 absolute bottom-4 right-4 animate-[bounce_5s_infinite_1s] shadow-[0_0_20px_rgba(59,130,246,0.3)] z-10">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <!-- Center Glass Circle -->
+                            <div class="w-16 h-16 bg-brand-light/40 backdrop-blur-md rounded-full border border-white/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 relative bg-[#0b1120] overflow-hidden" id="faq">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center" data-aos="fade-up">Domande <span class="text-brand-accent">Frequenti</span></h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Quanto tempo ci vuole per vedere il mio sito online?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                La nostra forza è la velocità. Una volta concluso il briefing iniziale e ricevuto tutto il materiale (testi e foto), garantiamo la messa online del primo draft entro 72 ore lavorative. Crediamo che nel mercato di Pescara la tempestività faccia la differenza tra un'opportunità colta e una persa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Perché i vostri prezzi sono così competitivi rispetto alle grandi agenzie?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                Abbiamo scelto un modello di business snello e focalizzato sulle piccole realtà locali e startup. Abbattiamo i costi di gestione superflui tipici delle grandi agenzie nazionali per offrirti la stessa qualità tecnologica a un prezzo accessibile, sostenendo l'economia del nostro territorio abruzzese.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Cosa succede se ho bisogno di modifiche dopo la pubblicazione?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                Non ti lasciamo mai solo. Abbiamo strutturato un sistema di aggiornamenti basato sul tuo piano: per il piano Essential gestiamo le modifiche a consumo, mentre per il piano Premium hai i primi 5 interventi completamente gratuiti. Il nostro obiettivo è far evolvere il sito insieme alla tua azienda.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Il supporto informatico è incluso nel prezzo del sito?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                Nel piano Premium (400€) è incluso un supporto informatico dedicato che copre la risoluzione di bug tecnici, aggiornamenti di sicurezza e consulenza diretta. Vogliamo che tu ti occupi solo del tuo lavoro, alla parte tecnica pensiamo noi di OliMezz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Posso integrare anche la gestione dei Social Media in un secondo momento?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                Assolutamente sì. OliMezz nasce per essere un ecosistema digitale. Puoi iniziare con il sito web e aggiungere successivamente uno dei nostri tre pacchetti Social (Lite, Pro o Elite) per portare traffico qualificato alla tua nuova piattaforma digitale.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item group bg-[#0b1120]/60 backdrop-blur-md border border-cyan-400/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50" data-aos="fade-up" data-aos-delay="500">
+                        <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-white">Siete una realtà fisica o lavorate solo da remoto?</span>
+                            <svg class="w-5 h-5 text-brand-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-5 text-brand-gray leading-relaxed">
+                                Siamo una realtà con radici profonde a Pescara. Crediamo che la tecnologia sia nulla senza il rapporto umano: siamo disponibili per incontri conoscitivi di persona in Abruzzo per discutere la tua visione e darti il supporto che solo chi vive il tuo stesso territorio può offrirti.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex justify-end" data-aos="fade-up">
+                    <a href="services.html" class="px-8 py-4 bg-brand-accent text-white font-bold rounded-full hover:shadow-glow hover:scale-105 transition-all duration-300">
+                        Inizia il Progetto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 pt-16 pb-8 text-center bg-brand-dark relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center justify-center mb-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-12 w-auto object-contain rounded-md">
+                </div>
+                <p class="text-brand-gray max-w-sm">Eleviamo il tuo brand attraverso esperienze digitali straordinarie e performanti.</p>
+            </div>
+            <div class="text-brand-gray/60 text-sm flex flex-col items-center gap-2">
+                <p>Progettato con cura tra il mare e le montagne d'Abruzzo. 🌊🏔️</p>
+                <p>&copy; 2026 OliMezz Web Agency. Tutti i diritti riservati. | <a href="privacy-cookie-policy.html" class="hover:text-brand-accent transition-colors">Privacy & Cookie Policy</a> | <a href="#" id="revoke-cookie-consent" class="hover:text-brand-accent transition-colors">Rivedi consensi cookie</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
