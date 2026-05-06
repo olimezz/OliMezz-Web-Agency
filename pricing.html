@@ -18,104 +18,206 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0B192C',
-                            light: '#1E2F4D',
-                            accent: '#4A90E2',
-                            gray: '#8B9BB4'
+                            dark: '#0b1120',
+                            light: '#1e293b',
+                            accent: '#00d4ff',
+                            gray: '#94a3b8'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
                     boxShadow: {
-                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
-                        'glow': '0 0 20px rgba(74, 144, 226, 0.4)'
+                        'neon': '0 0 20px rgba(0, 212, 255, 0.3)',
+                        'neon-strong': '0 0 30px rgba(0, 212, 255, 0.5)'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-brand-dark">
 
-    <!-- Header (Simple with Back to Home) -->
+    <!-- Header -->
     <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/70 border-b border-white/10">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-10 w-auto object-contain rounded-md group-hover:shadow-glow transition-shadow">
+                <img src="assets/Logo.jpeg" alt="OliMezz Web Agency Logo" class="h-10 w-auto object-contain rounded-md group-hover:shadow-neon transition-shadow">
             </a>
-            <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors flex items-center gap-2">
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Chi Siamo</a>
+                <a href="pricing.html" class="text-sm font-medium text-brand-accent">Prezzi</a>
+                <a href="contact.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Contatti</a>
+            </nav>
+            <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors flex items-center gap-2 md:hidden">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Torna alla Home
             </a>
         </div>
     </header>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-32 relative min-h-screen flex flex-col justify-center" style="background-color: #0b1120;">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">I Nostri <span class="text-brand-accent">Piani</span></h2>
-                <p class="text-brand-gray max-w-2xl mx-auto text-lg">Scegli la soluzione più adatta alle tue esigenze e inizia a crescere online.</p>
+    <main class="pt-32 pb-20">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 mb-20 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Investimento <span class="text-brand-accent text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">Trasparente</span></h1>
+            <p class="text-brand-gray max-w-2xl mx-auto text-lg">Soluzioni professionali studiate per far crescere la tua attività, senza costi nascosti e con la massima qualità tecnologica.</p>
+        </section>
+
+        <!-- 1. SEZIONE: SVILUPPO WEB (UNA TANTUM) -->
+        <section class="container mx-auto px-6 mb-32">
+            <div class="flex items-center gap-4 mb-12" data-aos="fade-right">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/10"></div>
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-widest text-white/90">Sviluppo Web <span class="text-brand-accent text-sm font-normal align-middle ml-2 opacity-70">(Una Tantum)</span></h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/10"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
-                
-                <!-- Card 1: Essential -->
-                <div class="bg-brand-light/20 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card Starter -->
+                <div class="group relative bg-white/5 backdrop-blur-xl rounded-[2rem] p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Starter (One-Page)</h3>
+                        <p class="text-brand-gray text-sm italic">Ideale per liberi professionisti.</p>
                     </div>
-                    <h3 class="text-xl font-medium text-brand-gray mb-2">Essential Link</h3>
-                    <div class="text-4xl font-bold text-white mb-8">200€</div>
-                    <ul class="space-y-4 mb-8 text-brand-gray">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> One-Page</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 3 Link Rapidi</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gallery Foto</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Setup in 48h</li>
+                    <div class="text-5xl font-extrabold mb-8 text-blue-400">€ 299</div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Design moderno a pagina singola
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Mobile responsive
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Collegamento WhatsApp/Social
+                        </li>
                     </ul>
-                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-3 px-6 text-center rounded-full bg-brand-light/40 hover:bg-brand-accent text-white font-semibold transition-colors duration-300">Scegli Essential</a>
-                    <p class="text-xs text-brand-gray/70 mt-4 text-center font-medium">Aggiornamenti a consumo: 20€/intervento</p>
+                    <a href="https://wa.me/393517208111?text=Ciao%20OliMezz,%20vorrei%20attivare%20il%20piano%20Starter%20(One-Page)" class="block w-full py-4 text-center rounded-xl bg-white/10 hover:bg-blue-500 text-white hover:text-brand-dark font-bold transition-all duration-300">Seleziona Piano</a>
                 </div>
 
-                <!-- Card 2: Business (Più Scelto) -->
-                <div class="bg-gradient-to-b from-brand-accent/20 to-brand-light/30 backdrop-blur-xl rounded-3xl p-8 border border-brand-accent/50 hover:shadow-glow hover:-translate-y-2 transition-all duration-300 relative transform md:scale-105 z-10" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide shadow-lg">Più Scelto</div>
-                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <!-- Card Business -->
+                <div class="group relative bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 border border-green-500 shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all duration-500 scale-105 z-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-tighter shadow-[0_0_15px_rgba(34,197,94,0.4)]">Consigliato</div>
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Business (Multi-page)</h3>
+                        <p class="text-brand-gray text-sm italic">Ideale per attività locali.</p>
                     </div>
-                    <h3 class="text-xl font-medium text-brand-gray mb-2">Business Digital</h3>
-                    <div class="text-4xl font-bold text-white mb-8">350€</div>
-                    <ul class="space-y-4 mb-8 text-gray-200">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Multi-pagina</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> SEO Local Pescara</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Google Maps</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Copywriting incluso</li>
+                    <div class="text-5xl font-extrabold mb-8 text-green-400">€ 549</div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3 text-sm text-gray-100 font-medium">
+                            <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Fino a 5 pagine dedicate
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-100 font-medium">
+                            <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            SEO base per Pescara/Abruzzo
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-100 font-medium">
+                            <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Integrazione Google Maps
+                        </li>
                     </ul>
-                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-4 px-6 text-center rounded-full bg-brand-accent hover:bg-blue-500 text-white font-bold transition-colors duration-300 shadow-lg">Scegli Business</a>
-                    <p class="text-xs text-white/80 mt-4 text-center font-medium">2 Modifiche incluse, poi 15€/intervento</p>
+                    <a href="https://wa.me/393517208111?text=Ciao%20OliMezz,%20vorrei%20attivare%20il%20piano%20Business%20(Multi-page)" class="block w-full py-4 text-center rounded-xl bg-green-500 text-white font-bold shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] hover:scale-105 transition-all duration-300">Seleziona Piano</a>
                 </div>
 
-                <!-- Card 3: Premium -->
-                <div class="bg-brand-light/20 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <!-- Card Advanced -->
+                <div class="group relative bg-white/5 backdrop-blur-xl rounded-[2rem] p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Advanced (Dinamico)</h3>
+                        <p class="text-brand-gray text-sm italic">Ideale per chi vuole il massimo.</p>
                     </div>
-                    <h3 class="text-xl font-medium text-brand-gray mb-2">Premium Support</h3>
-                    <div class="text-4xl font-bold text-white mb-8">400€</div>
-                    <ul class="space-y-4 mb-8 text-brand-gray">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Supporto Tecnico H24</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Email Aziendale</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Analisi Dati</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Velocità Massima</li>
+                    <div class="text-5xl font-extrabold mb-8 text-purple-400">€ 899</div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Funzionalità dinamiche avanzate
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Ottimizzazione prestazioni estrema
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Design custom esclusivo
+                        </li>
                     </ul>
-                    <a href="https://api.whatsapp.com/message/2MXXIJTLF2RHJ1?autoload=1&app_absent=0" target="_blank" class="block w-full py-3 px-6 text-center rounded-full bg-brand-light/40 hover:bg-brand-accent text-white font-semibold transition-colors duration-300">Scegli Premium</a>
-                    <p class="text-xs text-brand-gray/70 mt-4 text-center font-medium">5 Modifiche GRATIS incluse, poi solo 10€/intervento</p>
+                    <a href="https://wa.me/393517208111?text=Ciao%20OliMezz,%20vorrei%20attivare%20il%20piano%20Advanced%20(Dinamico)" class="block w-full py-4 text-center rounded-xl bg-white/10 hover:bg-purple-500 text-white hover:text-brand-dark font-bold transition-all duration-300">Seleziona Piano</a>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- 2. SEZIONE: WEBMASTER IN AFFITTO (ABBONAMENTO RICORRENTE) -->
+        <section class="container mx-auto px-6 mb-32 bg-brand-light/20 py-20 rounded-[3rem] border border-white/5 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.05),transparent_70%)] pointer-events-none"></div>
+            
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Webmaster <span class="text-brand-accent">in Affitto</span></h2>
+                <p class="text-brand-gray">La tua tranquillità digitale in abbonamento mensile.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Maintenance Base -->
+                <div class="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-blue-500/30 transition-all group" data-aos="fade-right">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Maintenance Base</h3>
+                    <div class="text-3xl font-black text-blue-400 mb-6">€ 29<span class="text-sm font-normal text-brand-gray">/mese</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Hosting professionale
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Certificato SSL (Lucchetto di sicurezza)
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            1 modifica testi/foto al mese inclusa
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/393517208111?text=Ciao%20OliMezz,%20vorrei%20attivare%20il%20piano%20Maintenance%20Base" class="inline-block px-6 py-3 rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-brand-dark transition-all font-bold text-sm">Seleziona Piano</a>
+                </div>
+
+                <!-- Dynamic Updates -->
+                <div class="bg-green-500/5 backdrop-blur-md rounded-3xl p-8 border border-green-500/50 hover:border-green-500 transition-all group" data-aos="fade-left">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dynamic Updates</h3>
+                    <div class="text-3xl font-black text-green-400 mb-6">€ 89<span class="text-sm font-normal text-brand-gray">/mese</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Hosting e SSL Premium
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Fino a 4 aggiornamenti a settimana
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-300">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Supporto tecnico prioritario
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/393517208111?text=Ciao%20OliMezz,%20vorrei%20attivare%20il%20piano%20Dynamic%20Updates" class="inline-block px-6 py-3 rounded-lg bg-green-500 text-white hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all font-bold text-sm">Seleziona Piano</a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
 
     <!-- Footer -->
     <footer class="border-t border-white/10 pt-16 pb-8 text-center bg-brand-dark relative z-10">
@@ -136,6 +238,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 100, duration: 800, easing: 'ease-out-cubic' });
+        
+        // Sticky Header Logic
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.replace('bg-brand-dark/70', 'bg-brand-dark/95');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.replace('bg-brand-dark/95', 'bg-brand-dark/70');
+            }
+        });
     </script>
 </body>
 </html>

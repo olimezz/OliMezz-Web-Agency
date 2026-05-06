@@ -51,7 +51,7 @@ textarea:not(:placeholder-shown) + label {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #4A90E2; 
+    background: #00d4ff; 
 }
 
 /* Cookie Banner Animations */
